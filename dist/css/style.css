@@ -1,0 +1,545 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  background-color: white;
+  width: 80%;
+  margin: auto;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* CONTINUE FROM HERE */
+.stars-group{
+  margin-top: auto;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Cards General settings */
+.card{
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 20px 2px rgb(194, 194, 194);
+  transition: all .3s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.03);
+}
+
+.card-img{
+  width: 100%;
+  height: 7vw;
+}
+
+.card-text{
+  display: flex;
+  flex-direction: column;
+  padding: 12px 15px;
+}
+
+.card span{
+  font-weight: bold;
+}
+
+/* Flex Orientation settings */
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Font Awsome General settings */
+.fa-solid.blue{
+  color: #0c64f5;
+}
+
+.fa-solid.gray{
+  color: #efefef;
+}
+
+.fa-solid.white{
+  color: #fff;
+}
+
+/* Nav Menu General settings */
+header{
+  width: 100%;
+}
+
+.nav{
+  width: 100%;
+}
+
+.nav img{
+  width: 100px;
+  height: auto;
+}
+
+.nav-links ul{
+  margin: 0px;
+  height: 100%;
+}
+
+.nav-links ul li{
+  list-style: none;
+  height: 100%;
+}
+
+.nav-links ul li a{
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 0px 15px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 2px #fff;
+}
+
+.nav-links ul li a:hover{
+  width: 100%;
+  height: 100%;
+  border-top: solid 2px #0c64f5;
+ }
+
+/* Search General settings */
+.input-area {
+  padding-bottom: 30px;
+}
+
+.form{
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #efefef;
+  width: 340px;
+  overflow: hidden;
+}
+
+.input-field{
+  border: 0;
+  width: 100%;
+}
+
+.search-button{
+  background-color: #0c64f5;
+  color: #efefef;
+  font-weight: bold;
+  border: 0;
+  padding: 15px;
+}
+
+.search-button button{
+  border: none;
+  color: white;
+  text-align: center;
+  background-color: #0c64f5;
+}
+
+.search-icon{
+  display: none;
+}
+
+.ico-location{
+  display: flex;
+  width: 90px;
+  height: auto;
+  background-color: #efefef;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Filter General settings */
+.filter-field.row{
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.filter-card{
+  background-color: white;
+  border-radius: 30px;
+  border: 3px solid #efefef;
+  height: 50px;
+  transition: all .3s ease-in-out;
+  margin: 0 20px 20px 0;
+}
+
+.filter-card:hover{
+  transform: scale(1.05);
+}
+
+.filter-ico{
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  margin-left: -3px;
+  margin-top: -3px; 
+  border: 2px solid #deebff;
+  background-color: #deebff;
+}
+
+.filter-title{
+  margin-right: 30px;
+}
+
+.filter-text{
+  padding: 0px 15px;
+}
+
+.filter-text b{
+  height: 100%;
+  line-height: 50px;
+}
+
+.text-filter{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.text-filter .fa-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #efefef;
+  border-radius: 15px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  color: #0c64f5;
+}
+
+/* Accomodation settings */
+.accomodation{
+  width: 100%;
+  background-color: #efefef;
+  padding: 20px 50px;
+  border-radius: 20px;
+  width: 63%;
+}
+
+.accomodation .card{
+  width: 31%;
+}
+
+.accomodation .card-text{
+  min-height: 130px;
+}
+
+.accomodation .card-text p, .accomodation .card-text h3{
+  margin: 9px 0;
+}
+
+
+/* Most Popular settings */
+.most-popular{
+  background-color: #efefef;
+  padding: 20px 50px;
+  border-radius: 20px;
+  width: 35%;
+}
+
+.most-popular .title i{
+  display: none;
+}
+
+.most-popular .card{
+  width: 100%;
+}
+
+.most-popular .card-img{
+  width: 40%;
+  height: 8vw;
+}
+
+.most-popular .card-text{
+  width: 60%;
+  padding: 20px 15px 10px 15px;
+}
+
+/* Activities settings */
+.activities{
+  width: 100%;
+  margin: 40px 0;
+}
+
+.activities .column{
+  width: 22.5%;
+}
+
+.activities .card{
+  border: none;
+  width: 100%;
+}
+
+.card-xl .card-img{
+  height: 26vw;
+  width: auto;
+}
+
+.card-lg .card-img{
+  height: 15vw;
+}
+
+.card-md .card-img{
+  height: 10.9vw;
+}
+
+.card-sm .card-img{
+  height: 7vw;
+}
+
+/* Footer Settings */
+footer{
+  width: 100%;
+  background-color: #555;
+}
+
+footer .container{
+  background-color: #555;
+  padding: 30px 0px;
+  color: #fff;
+}
+
+footer ul{
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.footer-section{
+  width: 32%;
+}
+
+@media (max-width: 992px) {
+
+}
+
+
+@media (max-width: 768px) {
+.mobile-container{
+  width: 100%;
+}
+
+.container-margin{
+  width: 85%;
+}
+
+/* Nav Menu 768px settings */
+.nav{
+  width: 100%;
+  flex-direction: column;
+}
+
+.nav a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav img{
+  width: auto;
+  height: auto;
+}
+
+.nav-links li{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links ul{
+  padding-left: 0;
+}
+
+.nav-links ul li a{
+  border-bottom: solid 2px #fff;
+  height: 50px;
+}
+
+.nav-links ul li a:hover{
+  height: 50px;
+  border-bottom: solid 2px #0c64f5;
+  border-top: none;
+ }
+
+/* Search 768px settings */
+.search-button{
+  display: none;
+}
+
+.search-icon{
+  display: block;
+}
+
+.search-icon button{
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #0c64f5;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.search-icon i{
+  background-color: #0c64f5;
+}
+
+
+/* Filter 768px settings */
+.input-area{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filter-group{
+  width: 100%;
+  align-items: center;
+}
+
+.filter-title{
+  display: flex;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.text-filter{
+  justify-content: left;
+}
+
+/* Accomodation 768px settings */
+.accomodation-and-most-popular {
+  flex-direction: column;
+  align-items: center;
+}
+
+.accomodation{
+  order: 2;
+  padding: 0;
+  background-color: #fff;
+}
+
+.accomodation .row{
+  display: flex;
+  flex-direction: column;
+}
+
+.accomodation .card{
+  width: 100%;
+  height: auto;
+}
+
+.accomodation .card-img{
+  height: 20vh;
+}
+
+/* Most Popular 768px settings */
+.most-popular{  
+  display: flex;
+  order: 1;
+  width: 100%;
+  border-radius: unset;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.most-popular .card-img{
+  width: 40%;
+  height: 35vw;
+}
+
+/* Activities 768px settings */
+.activities{
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+}
+.activities h1{
+  width: 100%;
+}
+
+.activities .row{
+  flex-direction: column;
+  width: 100%;
+}
+
+.activities .column{
+  width: 100%;
+}
+
+.activities .card{
+  border: none;
+  width: 100%;
+}
+
+.activities .card-img{
+  height: 35vw;
+}
+
+/* Footer 768px settings */
+footer .container{
+  display: flex;
+  justify-content: center;
+}
+
+footer .row{
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-section{
+  width: 100%;
+}
+
+}
+
+
+
+
