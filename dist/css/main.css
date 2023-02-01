@@ -201,17 +201,23 @@ footer i {
   justify-content: space-between;
   width: 100%;
 }
-.options .fa-heart {
-  cursor: pointer;
-  font-weight: 100;
-  color: #444;
+.options__heart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.options .fa-heart.fa-heart:hover:before {
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 900;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-text-fill-color: transparent;
+.options__heart-icon .heart-empty,
+.options__heart-icon .heart-full {
+  position: absolute;
+}
+.options__heart-icon .heart-full {
+  transition: all 0.6s ease-in-out;
+  color: #9356DC;
+  opacity: 0;
+}
+.options__heart-icon:hover .heart-full {
+  opacity: 1;
 }
 
 .food-option {
@@ -234,6 +240,8 @@ footer i {
   padding: 10px 20px;
 }
 .food-option__price {
+  transition: all 0.6s ease-in-out;
+  transform: translateX(100%);
   position: relative;
   color: #000;
   width: 20%;
@@ -244,24 +252,16 @@ footer i {
   bottom: 10px;
 }
 .food-option__check-animation {
-  transform: translateX(100%);
-  display: none;
-}
-.food-option__check-animation i {
-  color: #fff;
-}
-
-.food-option:hover {
-  transition: all 1.6s ease-in-out;
-}
-
-.food-option:hover .food-option__check-animation {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(100%);
   background-color: #99E2D0;
-  width: 20%;
   height: 100%;
+  width: 20%;
+}
+.food-option:hover .food-option__check-animation, .food-option:hover .food-option__price {
   transform: translateX(0);
 }
 

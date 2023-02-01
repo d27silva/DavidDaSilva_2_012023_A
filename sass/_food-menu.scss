@@ -19,19 +19,24 @@
         width: 100%;
     }
 
-    .fa-heart {
-        cursor: pointer;
-        font-weight: 100;
-        color: $background-color-four;
+    &__heart-icon {
+        @include center;
+        position: relative;
 
-        &.fa-heart:hover:before {
-            background-clip: text;
-            -webkit-background-clip: text;
-            font-weight: 900;
-            background-image: linear-gradient($primary-color, $secondary-color);
-            -webkit-text-fill-color: transparent;
+        .heart-empty,
+        .heart-full {
+            position: absolute;
         }
 
+        .heart-full {
+            @include animation-six;
+            color: $primary-color;
+            opacity: 0;
+        }
+
+        &:hover .heart-full {
+            opacity: 1;
+        }
     }
 }
 
@@ -53,11 +58,12 @@
     }
 
     &__price {
+        @include animation-six;
+        transform: translateX(100%);
         position: relative;
         color: #000;
         width: 20%;
         height: 100%;
-
 
         p {
             position: absolute;
@@ -66,25 +72,16 @@
     }
 
     &__check-animation {
+        @include center;
+        @include animation-six;
         transform: translateX(100%);
-        display: none;
-
-
-        i {
-            color: #fff;
-
-        }
+        background-color: $tertiary-color;
+        height: 100%;
+        width: 20%;
     }
-}
 
-.food-option:hover {
-    @include animation-six;
-}
-
-.food-option:hover .food-option__check-animation {
-    @include center;
-    background-color: $tertiary-color;
-    width: 20%;
-    height: 100%;
-    transform: translateX(0);
+    &:hover &__check-animation,
+    &:hover &__price {
+        transform: translateX(0);
+    }
 }
