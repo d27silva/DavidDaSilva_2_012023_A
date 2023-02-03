@@ -7,8 +7,17 @@
     box-shadow: 0px 5px 8px 0px #b7b7b7;
     z-index: 2;
 
+    &__arrow-back {
+        position: absolute;
+        top: 50%;
+        font-size: 1em;
+        display: flex;
+        margin: 0 15px;
+    }
+
     &__logo {
-        width: 40%;
+        @include center;
+        width: 100%;
     }
 }
 
@@ -96,8 +105,6 @@
     @include column;
     @include container;
     background-color: $background-color-three;
-
-
 }
 
 .card {
@@ -169,8 +176,8 @@ footer {
         margin-right: 20px;
     }
 
-}
-
-.logo-footer {
-    width: 20%;
+    .logo-footer {
+        min-width: 100px;
+        max-width: 120px;
+    }
 }

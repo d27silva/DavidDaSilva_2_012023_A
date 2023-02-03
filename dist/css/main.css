@@ -9,8 +9,18 @@
   box-shadow: 0px 5px 8px 0px #b7b7b7;
   z-index: 2;
 }
+.header__arrow-back {
+  position: absolute;
+  top: 50%;
+  font-size: 1em;
+  display: flex;
+  margin: 0 15px;
+}
 .header__logo {
-  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .location {
@@ -175,11 +185,32 @@ footer p {
 footer i {
   margin-right: 20px;
 }
-
-.logo-footer {
-  width: 20%;
+footer .logo-footer {
+  min-width: 100px;
+  max-width: 120px;
 }
 
+@-webkit-keyframes option {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes option {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .header-img {
   position: relative;
   z-index: 2;
@@ -190,7 +221,7 @@ footer i {
   position: relative;
   z-index: 3;
   background-color: #efefef;
-  border-radius: 60px 60px 0 0;
+  border-radius: 40px 40px 0 0;
   margin-top: -80px;
   padding-bottom: 60px;
 }
@@ -202,6 +233,7 @@ footer i {
   width: 100%;
 }
 .options__heart-icon {
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,6 +252,21 @@ footer i {
   opacity: 1;
 }
 
+.section-title {
+  text-transform: uppercase;
+}
+.section-title h3::after {
+  content: "";
+  height: 0.15em;
+  width: 3em;
+  background-color: #99E2D0;
+  display: block;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 5px;
+}
+
 .food-option {
   display: flex;
   flex-direction: row;
@@ -228,16 +275,29 @@ footer i {
   align-items: center;
   background-color: #fff;
   box-shadow: 0px 0px 15px 2px rgb(218, 218, 218);
-  border-radius: 30px;
-  height: 100px;
+  border-radius: 15px;
+  height: 70px;
   overflow: hidden;
+  -webkit-animation: option 1000ms 500ms;
+          animation: option 1000ms 500ms;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  margin-bottom: 15px;
 }
 .food-option__text {
+  min-width: 150px;
   width: 80%;
   height: 100%;
   color: #222;
-  font-size: 16px;
-  padding: 10px 20px;
+  padding: 15px 0 10px 15px;
+}
+.food-option__text h4,
+.food-option__text p {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0;
 }
 .food-option__price {
   transition: all 0.6s ease-in-out;
@@ -261,7 +321,18 @@ footer i {
   height: 100%;
   width: 20%;
 }
-.food-option:hover .food-option__check-animation, .food-option:hover .food-option__price {
+.food-option__check-animation i {
+  transition: all 0.6s ease-in-out;
+  transform: rotate(180deg);
+  color: #fff;
+}
+.food-option:hover .food-option__check-animation {
+  transform: translateX(0);
+}
+.food-option:hover .food-option__check-animation i {
+  transform: rotate(0deg);
+}
+.food-option:hover .food-option__price {
   transform: translateX(0);
 }
 
@@ -277,9 +348,31 @@ body {
 }
 
 h1 {
-  align-self: flex-start;
   font-family: "Shrikhand", cursive;
   letter-spacing: 1px;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 15px;
+}
+
+i {
+  color: #222;
 }
 
 ul li {

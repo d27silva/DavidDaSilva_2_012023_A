@@ -16,9 +16,31 @@ body {
 }
 
 h1 {
-    align-self: flex-start;
     font-family: 'Shrikhand', cursive;
     letter-spacing: 1px;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'Shrikhand', cursive;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 15px;
+}
+
+i {
+    color: #222;
 }
 
 ul li {

@@ -8,7 +8,7 @@
     position: relative;
     z-index: 3;
     background-color: $background-color-three;
-    border-radius: 60px 60px 0 0;
+    border-radius: 40px 40px 0 0;
     margin-top: -80px;
     padding-bottom: 60px;
 
@@ -20,6 +20,7 @@
     }
 
     &__heart-icon {
+        width: 20%;
         @include center;
         position: relative;
 
@@ -40,21 +41,50 @@
     }
 }
 
+
+.section-title {
+    text-transform: uppercase;
+
+    h3::after {
+        content: "";
+        height: .15em;
+        width: 3em;
+        background-color: $tertiary-color;
+        display: block;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-top: 5px;
+    }
+}
+
 .food-option {
     @include row;
     @include center;
     background-color: $background-color-one;
     box-shadow: 0px 0px 15px 2px rgb(218, 218, 218);
-    border-radius: 30px;
-    height: 100px;
+    border-radius: 15px;
+    height: 70px;
     overflow: hidden;
+    animation: option 1000ms 500ms;
+    animation-fill-mode: backwards;
+    margin-bottom: 15px;
 
     &__text {
+        min-width: 150px;
         width: 80%;
         height: 100%;
         color: #222;
-        font-size: 16px;
-        padding: 10px 20px;
+        padding: 15px 0 10px 15px;
+
+        h4,
+        p {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 10px 0;
+        }
     }
 
     &__price {
@@ -78,9 +108,24 @@
         background-color: $tertiary-color;
         height: 100%;
         width: 20%;
+
+        i {
+            @include animation-six;
+            transform: rotate(180deg);
+            color: #fff;
+        }
     }
 
-    &:hover &__check-animation,
+    &:hover &__check-animation {
+        transform: translateX(0);
+
+        i {
+            transform: rotate(0deg);
+        }
+
+
+    }
+
     &:hover &__price {
         transform: translateX(0);
     }

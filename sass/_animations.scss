@@ -1,3 +1,15 @@
 @mixin animation-six {
     transition: all .6s ease-in-out;
 }
+
+@keyframes option {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
