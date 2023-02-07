@@ -15,8 +15,14 @@
     &__restaurant-name {
         @include row;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
+    }
+
+    .heart-icon {
+        width: 0;
+        padding-right: 20px;
     }
 
     .section-title {
@@ -42,26 +48,25 @@
     background-color: $background-color-one;
     box-shadow: 0px 0px 15px 2px rgb(218, 218, 218);
     border-radius: 15px;
-    height: 70px;
+    height: 100px;
     overflow: hidden;
     animation: menu-card 1000ms 500ms;
     animation-fill-mode: backwards;
     margin-bottom: 15px;
 
     &__text {
-        min-width: 150px;
         width: 80%;
+        min-width: 50px;
         height: 100%;
         color: #222;
         padding: 15px 0 10px 15px;
 
-        h4,
+        h3,
         p {
             flex: 1;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            margin: 10px 0;
         }
     }
 
@@ -71,6 +76,7 @@
         position: relative;
         color: #000;
         width: 20%;
+        margin-left: 20px;
         height: 100%;
 
         p {

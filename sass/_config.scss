@@ -5,6 +5,7 @@ $background-color-one: #fff;
 $background-color-two: #fbfbfb;
 $background-color-three: #efefef;
 $background-color-four: #444;
+$background-color-five: #d5d5d5;
 
 @mixin color-gradient {
     background: linear-gradient($secondary-color, $primary-color );

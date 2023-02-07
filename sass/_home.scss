@@ -126,18 +126,16 @@
     }
 
     &__text {
-        @include column;
-        justify-content: center;
-        padding: 12px 30px;
-        line-height: 1px;
-        width: 90%;
+        padding: 0 30px;
+        width: 80%;
+        min-width: 50px;
 
-        // h3,
-        // p {
-        //     flex: 2;
-        //     white-space: nowrap;
-        //     overflow: hidden;
-        //     text-overflow: ellipsis;
-        // }
+        h3,
+        p {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
