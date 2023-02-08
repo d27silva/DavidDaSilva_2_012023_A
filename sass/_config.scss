@@ -7,6 +7,10 @@ $background-color-three: #efefef;
 $background-color-four: #444;
 $background-color-five: #d5d5d5;
 
+
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / 10;
+
 @mixin color-gradient {
     background: linear-gradient($secondary-color, $primary-color );
 }

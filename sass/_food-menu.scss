@@ -50,8 +50,14 @@
     border-radius: 15px;
     height: 100px;
     overflow: hidden;
-    animation: menu-card 1000ms 500ms;
-    animation-fill-mode: backwards;
+    animation: menu-card $anim-dur backwards;
+
+    @for $i from 1 through 15 {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+
     margin-bottom: 15px;
 
     &__text {

@@ -146,17 +146,6 @@
   text-overflow: ellipsis;
 }
 
-@-webkit-keyframes menu-card {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 @keyframes menu-card {
   0% {
     transform: translateX(100%);
@@ -167,30 +156,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes load-page {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes load-page {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-  }
-}
-@-webkit-keyframes squares {
-  0% {
-    transform: translateY(150%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 @keyframes squares {
@@ -255,11 +226,53 @@
   border-radius: 15px;
   height: 100px;
   overflow: hidden;
-  -webkit-animation: menu-card 1000ms 500ms;
-          animation: menu-card 1000ms 500ms;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation: menu-card 1000ms backwards;
   margin-bottom: 15px;
+}
+.food-option--1 {
+  animation-delay: 100ms;
+}
+.food-option--2 {
+  animation-delay: 200ms;
+}
+.food-option--3 {
+  animation-delay: 300ms;
+}
+.food-option--4 {
+  animation-delay: 400ms;
+}
+.food-option--5 {
+  animation-delay: 500ms;
+}
+.food-option--6 {
+  animation-delay: 600ms;
+}
+.food-option--7 {
+  animation-delay: 700ms;
+}
+.food-option--8 {
+  animation-delay: 800ms;
+}
+.food-option--9 {
+  animation-delay: 900ms;
+}
+.food-option--10 {
+  animation-delay: 1000ms;
+}
+.food-option--11 {
+  animation-delay: 1100ms;
+}
+.food-option--12 {
+  animation-delay: 1200ms;
+}
+.food-option--13 {
+  animation-delay: 1300ms;
+}
+.food-option--14 {
+  animation-delay: 1400ms;
+}
+.food-option--15 {
+  animation-delay: 1500ms;
 }
 .food-option__text {
   width: 80%;
@@ -416,14 +429,41 @@ img {
   opacity: 1;
 }
 
+.order-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  height: 50px;
+  width: 40%;
+  border-radius: 30px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.spacer-one {
+  margin-top: 1em;
+}
+
+.spacer-two {
+  margin-top: 2em;
+}
+
+.spacer-three {
+  margin-top: 3em;
+}
+
+.spacer-four {
+  margin-top: 4em;
+}
+
 .load-page {
   background-color: #efefef;
-  -webkit-animation: load-page 100ms 3s;
-          animation: load-page 100ms 3s;
+  animation: load-page 100ms 3s;
   z-index: 200;
   position: absolute;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   height: 100%;
   width: 100%;
   display: flex;
@@ -446,8 +486,7 @@ img {
   height: 20px;
   width: 20px;
   background-color: #FF79DA;
-  -webkit-animation: squares 800ms 150ms both infinite alternate;
-          animation: squares 800ms 150ms both infinite alternate;
+  animation: squares 800ms 150ms both infinite alternate;
 }
 .load-page .square-three {
   height: 20px;
