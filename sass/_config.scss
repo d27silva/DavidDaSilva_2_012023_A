@@ -9,7 +9,7 @@ $background-color-five: #d5d5d5;
 
 
 $anim-dur: 1000ms;
-$anim-delay: $anim-dur / 10;
+$anim-delay: calc($anim-dur / 10);
 
 @mixin color-gradient {
     background: linear-gradient($secondary-color, $primary-color );
@@ -39,10 +39,14 @@ $anim-delay: $anim-dur / 10;
     padding: 20px;
 }
 
-
-
 @mixin desktop {
     @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 769px) {
         @content;
     }
 }

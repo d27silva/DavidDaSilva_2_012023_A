@@ -135,43 +135,51 @@ img {
 }
 
 
+@mixin z-index {
+    z-index: 200;
+}
+
+@mixin load-page {}
 
 .load-page {
+    @include center;
+    @include z-index;
     background-color: $background-color-three;
     animation: load-page 100ms 3s;
-    z-index: 200;
     position: absolute;
     animation-fill-mode: both;
     height: 100%;
     width: 100%;
-    @include center;
+    // @if $z-index ==true {
+    //     display: none;
+    // }
+}
 
-    .animated-squares {
-        width: 15%;
-        justify-content: space-between;
-        @include row;
-    }
+.animated-squares {
+    width: 15%;
+    justify-content: space-between;
+    @include row;
+}
 
-    .square-one {
-        height: 20px;
-        width: 20px;
-        background-color: $primary-color;
-        animation: squares 500ms 50ms both infinite alternate-reverse;
-    }
+.square-one {
+    height: 20px;
+    width: 20px;
+    background-color: $primary-color;
+    animation: squares 500ms 50ms both infinite alternate-reverse;
+}
 
-    .square-two {
-        height: 20px;
-        width: 20px;
-        background-color: $secondary-color;
-        animation: squares 800ms 150ms both infinite alternate;
-    }
+.square-two {
+    height: 20px;
+    width: 20px;
+    background-color: $secondary-color;
+    animation: squares 800ms 150ms both infinite alternate;
+}
 
-    .square-three {
-        height: 20px;
-        width: 20px;
-        background-color: $tertiary-color;
-        animation: squares 500ms 50ms both infinite alternate-reverse;
-    }
+.square-three {
+    height: 20px;
+    width: 20px;
+    background-color: $tertiary-color;
+    animation: squares 500ms 50ms both infinite alternate-reverse;
 }
 
 
