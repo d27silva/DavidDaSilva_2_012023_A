@@ -2,7 +2,6 @@
 @import "home";
 @import "animations";
 @import "food-menu";
-@import "responsive";
 
 html {
     box-sizing: border-box;
@@ -44,6 +43,10 @@ i {
     color: #222;
 }
 
+ul {
+    padding-inline-start: 0px;
+}
+
 ul li {
     list-style: none;
     color: white;
@@ -53,6 +56,7 @@ a {
     text-decoration: none;
     margin: 0;
     padding: 0;
+    width: inherit;
     color: inherit;
 }
 
@@ -70,17 +74,19 @@ img {
     box-shadow: 0px 5px 8px 0px #b7b7b7;
     z-index: 2;
 
+    &__logo {
+        @include center;
+        width: 100%;
+        position: absolute;
+    }
+
     &__arrow-back {
         position: absolute;
+        z-index: 7;
         top: 50%;
         font-size: 1em;
         display: flex;
         margin: 0 15px;
-    }
-
-    &__logo {
-        @include center;
-        width: 100%;
     }
 }
 
@@ -112,7 +118,7 @@ img {
     @include color-gradient;
     color: white;
     height: 50px;
-    width: 40%;
+    width: 150px;
     border-radius: 30px;
     padding: 0px 15px;
     margin: 0 auto;
@@ -184,8 +190,20 @@ img {
 
 
 footer {
-    @include container-footer;
+    @include container;
     background-color: $background-color-four;
+
+    @include tablet-only {
+
+        margin: 0 auto;
+    }
+
+    .content {
+        @include tablet-only {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
 
     p {
         font-weight: bolder;

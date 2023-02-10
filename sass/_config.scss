@@ -35,18 +35,20 @@ $anim-delay: calc($anim-dur / 10);
     padding: 30px;
 }
 
-@mixin container-footer {
-    padding: 20px;
+@mixin tablet-only {
+    @media screen and (min-width: 769px) {
+        @content;
+    }
 }
 
-@mixin desktop {
+@mixin desktop-only {
     @media screen and (min-width: 992px) {
         @content;
     }
 }
 
-@mixin tablet {
-    @media screen and (min-width: 769px) {
+@mixin desktop-XL-only {
+    @media screen and (min-width: 1200px) {
         @content;
     }
 }

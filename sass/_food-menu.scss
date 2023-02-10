@@ -1,6 +1,12 @@
 .header-img {
     position: relative;
     z-index: 2;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+        height: 120%;
+    }
 }
 
 .options {
@@ -9,8 +15,32 @@
     z-index: 3;
     background-color: $background-color-three;
     border-radius: 40px 40px 0 0;
-    margin-top: -80px;
+    margin: -80px auto 0 auto;
     padding-bottom: 60px;
+    max-width: 1200px;
+
+    .all-dishes-together {
+        @include column;
+
+        @include desktop-only {
+            @include row;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    .entrees-section,
+    .main-dishes-section,
+    .desserts-section {
+        @include desktop-only {
+            width: 31%;
+        }
+    }
+
+    h3 {
+        justify-content: left;
+    }
 
     &__restaurant-name {
         @include row;
@@ -51,15 +81,12 @@
     height: 100px;
     overflow: hidden;
     animation: menu-card $anim-dur backwards;
+    @include animation-six;
 
     @for $i from 1 through 15 {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
         }
-    }
-
-    @include tablet {
-        border-radius: 0px;
     }
 
     margin-bottom: 15px;
