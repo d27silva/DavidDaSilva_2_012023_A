@@ -38,10 +38,6 @@
         }
     }
 
-    h3 {
-        justify-content: left;
-    }
-
     &__restaurant-name {
         @include row;
         align-items: center;
@@ -95,7 +91,7 @@
         width: 80%;
         min-width: 50px;
         height: 100%;
-        color: #222;
+        color: $text-color-three;
         padding: 15px 0 10px 15px;
 
         h3,
@@ -111,7 +107,7 @@
         @include animation-six;
         transform: translateX(100%);
         position: relative;
-        color: #000;
+        color: $text-color-five;
         width: 20%;
         margin-left: 20px;
         height: 100%;
@@ -133,7 +129,7 @@
         i {
             @include animation-six;
             transform: rotate(0deg);
-            color: #fff;
+            color: $text-color-one;
         }
     }
 

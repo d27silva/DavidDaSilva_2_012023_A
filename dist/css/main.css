@@ -1,4 +1,4 @@
-.location {
+header .location {
   position: relative;
   display: flex;
   justify-content: center;
@@ -9,11 +9,10 @@
   height: 60px;
   background-color: #efefef;
 }
-.location h3 {
+header .location h3 {
   margin-left: 10px;
 }
-
-.book-cta {
+header .book-cta {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -23,27 +22,9 @@
   width: 100%;
   background-color: #fbfbfb;
 }
-.book-cta__text {
+header .book-cta__text {
   text-align: center;
   width: 80%;
-}
-.book-cta__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  height: auto;
-  border-radius: 30px;
-  padding: 0px 15px;
-}
-
-@media screen and (min-width: 992px) {
-  section .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 .how-it-works {
@@ -92,7 +73,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #fff;
   background-color: #9356DC;
   border-radius: 15px;
   width: 2em;
@@ -108,7 +89,7 @@
 }
 .how-it-works .all-steps .step__text {
   width: 80%;
-  color: #222;
+  color: #333;
 }
 
 .restaurants {
@@ -141,7 +122,7 @@
 .restaurants .row .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
   margin-top: 30px;
@@ -169,7 +150,7 @@
 }
 .restaurants .row .card__tag-new:hover {
   background-color: #32b091;
-  color: white;
+  color: #fff;
 }
 .restaurants .row .card__img {
   width: 100%;
@@ -194,11 +175,11 @@
 
 @keyframes menu-card {
   0% {
-    transform: translateX(100%);
+    transform: translateY(30%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -208,6 +189,7 @@
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes squares {
@@ -259,9 +241,6 @@
   .options .desserts-section {
     width: 31%;
   }
-}
-.options h3 {
-  justify-content: left;
 }
 .options__restaurant-name {
   display: flex;
@@ -354,7 +333,7 @@
   width: 80%;
   min-width: 50px;
   height: 100%;
-  color: #222;
+  color: #333;
   padding: 15px 0 10px 15px;
 }
 .food-option__text h3,
@@ -417,7 +396,7 @@ h1 {
   font-family: "Shrikhand", cursive;
   letter-spacing: 1px;
   font-size: 2em;
-  color: #222;
+  color: #333;
 }
 
 h2 {
@@ -430,6 +409,14 @@ h3 {
   font-size: 19px;
 }
 
+@media screen and (min-width: 992px) {
+  .title h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 h4 {
   font-size: 16px;
 }
@@ -439,7 +426,7 @@ p {
 }
 
 i {
-  color: #222;
+  color: #333;
 }
 
 ul {
@@ -449,14 +436,14 @@ ul {
 
 ul li {
   list-style: none;
-  color: white;
+  color: #fff;
 }
 
 a {
   text-decoration: none;
   margin: 0;
   padding: 0;
-  width: inherit;
+  width: 100%;
   color: inherit;
 }
 
@@ -491,6 +478,13 @@ img {
   display: flex;
   margin: 0 15px;
 }
+.header__arrow-back a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  color: inherit;
+}
 
 .heart-icon {
   display: flex;
@@ -506,24 +500,28 @@ img {
 }
 .heart-icon .heart-full {
   transition: all 0.6s ease-in-out;
-  color: #9356DC;
   opacity: 0;
 }
 .heart-icon:hover .heart-full {
   opacity: 1;
 }
 
-.order-button {
+.button-standard {
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  height: 50px;
-  width: 150px;
+  color: #fff;
   border-radius: 30px;
   padding: 0px 15px;
   margin: 0 auto;
+  max-width: 200px;
+  box-shadow: 1px 2px 5px 1px rgb(204, 204, 204);
+}
+.button-standard a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .spacer-one {
@@ -549,34 +547,32 @@ img {
   z-index: 200;
   background-color: #efefef;
   animation: load-page 100ms 3s;
-  position: absolute;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   animation-fill-mode: both;
-  height: 100%;
-  width: 100%;
 }
-
-.animated-squares {
+.load-page .animated-squares {
   width: 15%;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
 }
-
-.square-one {
+.load-page .square-one {
   height: 20px;
   width: 20px;
   background-color: #9356DC;
   animation: squares 500ms 50ms both infinite alternate-reverse;
 }
-
-.square-two {
+.load-page .square-two {
   height: 20px;
   width: 20px;
   background-color: #FF79DA;
   animation: squares 800ms 150ms both infinite alternate;
 }
-
-.square-three {
+.load-page .square-three {
   height: 20px;
   width: 20px;
   background-color: #99E2D0;

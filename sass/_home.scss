@@ -1,44 +1,30 @@
-.location {
-    position: relative;
-    @include center;
-    @include row;
-    width: 100%;
-    height: 60px;
-    background-color: $background-color-three;
-
-    h3 {
-        margin-left: 10px;
-    }
-}
-
-.book-cta {
-    @include column;
-    @include center;
-    padding: 30px 0px;
-    width: 100%;
-    background-color: $background-color-two;
-
-    &__text {
-        text-align: center;
-        width: 80%;
-    }
-
-    &__button {
+header {
+    .location {
+        position: relative;
         @include center;
-        @include color-gradient;
-        color: white;
-        height: auto;
-        border-radius: 30px;
-        padding: 0px 15px;
-    }
-}
+        @include row;
+        width: 100%;
+        height: 60px;
+        background-color: $background-color-three;
 
-section .title {
-    @include desktop-only {
+        h3 {
+            margin-left: 10px;
+        }
+    }
+
+    .book-cta {
+        @include column;
         @include center;
+        padding: 30px 0px;
+        width: 100%;
+        background-color: $background-color-two;
+
+        &__text {
+            text-align: center;
+            width: 80%;
+        }
     }
 }
-
 
 .how-it-works {
     @include column;
@@ -78,7 +64,7 @@ section .title {
 
             &__number {
                 @include center;
-                color: white;
+                color: $text-color-one;
                 background-color: $primary-color;
                 border-radius: 15px;
                 width: 2em;
@@ -89,12 +75,12 @@ section .title {
             &__ico {
                 @include center;
                 width: 20%;
-                color: #666;
+                color: $text-color-four;
             }
 
             &__text {
                 width: 80%;
-                color: #222;
+                color: $text-color-three;
             }
         }
     }
@@ -128,7 +114,7 @@ section .title {
         .card {
             display: flex;
             flex-direction: column;
-            background-color: white;
+            background-color: $background-color-one;
             border-radius: 15px;
             overflow: hidden;
             margin-top: 30px;
@@ -156,7 +142,7 @@ section .title {
 
                 &:hover {
                     background-color: darken($tertiary-color, $amount: 30%);
-                    color: white;
+                    color: $text-color-one;
                 }
             }
 

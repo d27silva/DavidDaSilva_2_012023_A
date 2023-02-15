@@ -18,7 +18,7 @@ h1 {
     font-family: 'Shrikhand', cursive;
     letter-spacing: 1px;
     font-size: 2em;
-    color: #222;
+    color: $text-color-three;
 }
 
 h2 {
@@ -31,6 +31,12 @@ h3 {
     font-size: 19px;
 }
 
+.title h3 {
+    @include desktop-only {
+        @include center;
+    }
+}
+
 h4 {
     font-size: 16px;
 }
@@ -40,7 +46,7 @@ p {
 }
 
 i {
-    color: #222;
+    color: $text-color-three;
 }
 
 ul {
@@ -49,14 +55,14 @@ ul {
 
 ul li {
     list-style: none;
-    color: white;
+    color: $text-color-one;
 }
 
 a {
     text-decoration: none;
     margin: 0;
     padding: 0;
-    width: inherit;
+    width: 100%;
     color: inherit;
 }
 
@@ -87,6 +93,14 @@ img {
         font-size: 1em;
         display: flex;
         margin: 0 15px;
+
+        a {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            width: inherit;
+            color: inherit;
+        }
     }
 }
 
@@ -103,8 +117,10 @@ img {
 
     .heart-full {
         @include animation-six;
-        color: $primary-color;
+        // color: $primary-color;
+        // @include color-gradient;
         opacity: 0;
+        // height: 20px;
     }
 
     &:hover .heart-full {
@@ -112,16 +128,20 @@ img {
     }
 }
 
-
-.order-button {
+.button-standard {
     @include center;
     @include color-gradient;
-    color: white;
-    height: 50px;
-    width: 150px;
+    color: $text-color-one;
     border-radius: 30px;
     padding: 0px 15px;
     margin: 0 auto;
+    max-width: 200px;
+    box-shadow: 1px 2px 5px 1px rgb(204, 204, 204);
+
+    a {
+        @include center;
+    }
+
 }
 
 .spacer-one {
@@ -145,48 +165,46 @@ img {
     z-index: 200;
 }
 
-@mixin load-page {}
-
 .load-page {
     @include center;
     @include z-index;
     background-color: $background-color-three;
     animation: load-page 100ms 3s;
-    position: absolute;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     animation-fill-mode: both;
-    height: 100%;
-    width: 100%;
-    // @if $z-index ==true {
-    //     display: none;
-    // }
+
+    .animated-squares {
+        width: 15%;
+        justify-content: space-between;
+        @include row;
+    }
+
+    .square-one {
+        height: 20px;
+        width: 20px;
+        background-color: $primary-color;
+        animation: squares 500ms 50ms both infinite alternate-reverse;
+    }
+
+    .square-two {
+        height: 20px;
+        width: 20px;
+        background-color: $secondary-color;
+        animation: squares 800ms 150ms both infinite alternate;
+    }
+
+    .square-three {
+        height: 20px;
+        width: 20px;
+        background-color: $tertiary-color;
+        animation: squares 500ms 50ms both infinite alternate-reverse;
+    }
 }
 
-.animated-squares {
-    width: 15%;
-    justify-content: space-between;
-    @include row;
-}
-
-.square-one {
-    height: 20px;
-    width: 20px;
-    background-color: $primary-color;
-    animation: squares 500ms 50ms both infinite alternate-reverse;
-}
-
-.square-two {
-    height: 20px;
-    width: 20px;
-    background-color: $secondary-color;
-    animation: squares 800ms 150ms both infinite alternate;
-}
-
-.square-three {
-    height: 20px;
-    width: 20px;
-    background-color: $tertiary-color;
-    animation: squares 500ms 50ms both infinite alternate-reverse;
-}
 
 
 footer {
