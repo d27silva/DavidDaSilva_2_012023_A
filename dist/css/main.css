@@ -202,14 +202,40 @@ header .book-cta__text {
     opacity: 1;
   }
 }
+@keyframes heart {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.1;
+  }
+}
 .header-img {
   position: relative;
   z-index: 2;
-  height: 300px;
   overflow: hidden;
+  height: 65vw;
+}
+@media screen and (min-width: 769px) {
+  .header-img {
+    height: 35vw;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header-img {
+    height: 25vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-img {
+    height: 30vw;
+  }
 }
 .header-img img {
-  height: 120%;
+  height: 65vw;
 }
 
 .options {
@@ -218,9 +244,14 @@ header .book-cta__text {
   z-index: 3;
   background-color: #efefef;
   border-radius: 40px 40px 0 0;
-  margin: -80px auto 0 auto;
+  margin: -60px auto 0 auto;
   padding-bottom: 60px;
   max-width: 1200px;
+}
+@media screen and (min-width: 1200px) {
+  .options {
+    margin: -20% auto 0 auto;
+  }
 }
 .options .all-dishes-together {
   display: flex;
@@ -331,13 +362,12 @@ header .book-cta__text {
 }
 .food-option__text {
   width: 80%;
-  min-width: 50px;
   height: 100%;
   color: #333;
   padding: 15px 0 10px 15px;
 }
-.food-option__text h3,
 .food-option__text p {
+  width: 90%;
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -348,13 +378,13 @@ header .book-cta__text {
   transform: translateX(100%);
   position: relative;
   color: #000;
-  width: 20%;
-  margin-left: 20px;
+  width: 10%;
   height: 100%;
 }
 .food-option__price p {
   position: absolute;
   bottom: 10px;
+  transition: all 0.6s ease-in-out;
 }
 .food-option__check-animation {
   display: flex;
@@ -379,6 +409,9 @@ header .book-cta__text {
 }
 .food-option:hover .food-option__price {
   transform: translateX(0);
+}
+.food-option:hover p {
+  width: 80%;
 }
 
 html {
@@ -499,11 +532,17 @@ img {
   position: absolute;
 }
 .heart-icon .heart-full {
-  transition: all 0.6s ease-in-out;
   opacity: 0;
 }
 .heart-icon:hover .heart-full {
-  opacity: 1;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  line-height: 1em;
+  animation: heart 500ms both;
 }
 
 .button-standard {
@@ -517,6 +556,11 @@ img {
   margin: 0 auto;
   max-width: 200px;
   box-shadow: 1px 2px 5px 1px rgb(204, 204, 204);
+  background-color: #efefef;
+}
+.button-standard:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  box-shadow: 0px 3px 3px 1px rgb(168, 168, 168);
 }
 .button-standard a {
   display: flex;

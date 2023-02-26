@@ -15,10 +15,20 @@ $background-color-four: #444;
 $background-color-five: #d5d5d5;
 
 $anim-dur: 1000ms;
+$anim-dur-short: 500ms;
 $anim-delay: calc($anim-dur / 10);
 
 @mixin color-gradient {
     background: linear-gradient($secondary-color, $primary-color );
+}
+
+@mixin color-gradient-2 {
+    background: linear-gradient($primary-color, $secondary-color );
+}
+
+@mixin color-gradient-lighten {
+    @include color-gradient-2;
+    box-shadow: 0px 3px 3px 1px rgb(168, 168, 168);
 }
 
 @mixin center {

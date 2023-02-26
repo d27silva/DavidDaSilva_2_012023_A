@@ -2,6 +2,7 @@
     transition: all .6s ease-in-out;
 }
 
+
 @keyframes menu-card {
     0% {
         transform: translateY(30%);
@@ -34,5 +35,16 @@
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes heart {
+    0% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1.1;
     }
 }

@@ -116,15 +116,18 @@ img {
     }
 
     .heart-full {
-        @include animation-six;
-        // color: $primary-color;
-        // @include color-gradient;
         opacity: 0;
-        // height: 20px;
     }
 
     &:hover .heart-full {
-        opacity: 1;
+        @include color-gradient;
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        line-height: 1em;
+        animation: heart $anim-dur-short both;
     }
 }
 
@@ -137,6 +140,11 @@ img {
     margin: 0 auto;
     max-width: 200px;
     box-shadow: 1px 2px 5px 1px rgb(204, 204, 204);
+    background-color: $background-color-three;
+
+    &:hover {
+        @include color-gradient-lighten;
+    }
 
     a {
         @include center;
