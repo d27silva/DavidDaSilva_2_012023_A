@@ -64,7 +64,7 @@ $anim-delay: calc($anim-dur / 10);
 }
 
 @mixin desktop-XL-only {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         @content;
     }
 }

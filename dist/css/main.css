@@ -41,7 +41,7 @@ header .book-cta__text {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .how-it-works .all-steps {
     width: 1200px;
     margin: 0 auto;
@@ -108,7 +108,7 @@ header .book-cta__text {
     width: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .restaurants .row {
     width: 1200px;
     margin: 0 auto;
@@ -229,7 +229,7 @@ header .book-cta__text {
     height: 25vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .header-img {
     height: 30vw;
   }
@@ -246,9 +246,9 @@ header .book-cta__text {
   border-radius: 40px 40px 0 0;
   margin: -60px auto 0 auto;
   padding-bottom: 60px;
-  max-width: 1200px;
+  max-width: 1280px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .options {
     margin: -20% auto 0 auto;
   }
@@ -262,7 +262,7 @@ header .book-cta__text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 }
@@ -270,7 +270,7 @@ header .book-cta__text {
   .options .entrees-section,
   .options .main-dishes-section,
   .options .desserts-section {
-    width: 31%;
+    width: 32%;
   }
 }
 .options__restaurant-name {
@@ -309,7 +309,7 @@ header .book-cta__text {
   background-color: #fff;
   box-shadow: 0px 0px 15px 2px rgb(218, 218, 218);
   border-radius: 15px;
-  height: 100px;
+  height: 80px;
   overflow: hidden;
   animation: menu-card 1000ms backwards;
   transition: all 0.6s ease-in-out;
@@ -361,29 +361,37 @@ header .book-cta__text {
   animation-delay: 1500ms;
 }
 .food-option__text {
-  width: 80%;
-  height: 100%;
+  transition: all 0.6s ease-in-out;
+  width: 85%;
   color: #333;
   padding: 15px 0 10px 15px;
-}
-.food-option__text p {
-  width: 90%;
-  flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.food-option__text p,
+.food-option__text h4 {
+  transition: all 0.6s ease-in-out;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5px;
+}
 .food-option__price {
   transition: all 0.6s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translateX(100%);
   position: relative;
   color: #000;
-  width: 10%;
   height: 100%;
+  width: 15%;
 }
 .food-option__price p {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   transition: all 0.6s ease-in-out;
 }
 .food-option__check-animation {
@@ -394,7 +402,7 @@ header .book-cta__text {
   transform: translateX(100%);
   background-color: #99E2D0;
   height: 100%;
-  width: 20%;
+  width: 25%;
 }
 .food-option__check-animation i {
   transition: all 0.6s ease-in-out;
