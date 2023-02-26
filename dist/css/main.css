@@ -537,6 +537,7 @@ img {
 .heart-icon:hover .heart-full {
   background: linear-gradient(#FF79DA, #9356DC);
   background-size: 100%;
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
