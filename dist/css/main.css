@@ -208,7 +208,7 @@ header .book-cta__text {
   }
   100% {
     opacity: 1;
-    scale: 1.1;
+    transform: scale(0.8);
   }
 }
 .header-img {
